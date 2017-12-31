@@ -10,7 +10,7 @@ Agent 与环境
 
 __Agent__ 可以通过 __传感器__ (sensors) 来感知 __环境__ (environment)，然后通过 __执行器__ (actuators) 来作用环境。
 
-![agent](../images/agent.png)
+![agent](../images/agent.png){: width="100%"}
 
 简而言之，Agent 就是能够<mark>感知环境并作出行动的存在物</mark>，如上图 _摘苹果的小机器_ 。
 
@@ -32,7 +32,7 @@ __理性__ 依赖于以下四个因素：
 
 例如下图的 _吃豆人_ (pac-man) 游戏。
 
-![pacman](../images/pacman.jpg)
+![pacman](../images/pacman.jpg){: width="100%"}
 
 * 绩效指标：每到达一个有豆子的地方，则加 1 分，并限制在 30 步内；
 * 先验知识：地图（不包含豆子）；
@@ -94,4 +94,4 @@ def MODEL_BASED_REFLEX_AGENT(percept):
 
 ### 学习型 Agent ###
 
-### 代理程序如何组织起来运作 ###
+### Agent 程序如何组织起来运作 ###
