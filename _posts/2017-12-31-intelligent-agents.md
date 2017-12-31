@@ -1,6 +1,6 @@
 ---
-title: 智能体 (Intelligent Agents)
-teaser: 什么是智能体？
+title: 智能 Agent
+teaser: 人工智能领域的一个基本概念
 category: 介绍类
 tags: [人工智能]
 ---
@@ -39,7 +39,7 @@ __理性__ 依赖于以下四个因素：
 * 可能行动：上、下、左、右；
 * 当前感知：正确地感知到当前所处位置是否有豆子。
 
-在上述描述的环境下，吃豆人的目标是使得到分数尽可能高，则吃豆人称为理性 Agent。
+在上述描述的环境下，吃豆人的目标是使得到分数尽可能高，则称吃豆人为理性 Agent 或 智能 Agent。
 
 Agent 的结构
 ----------
@@ -54,10 +54,13 @@ __Agent 函数__ 是 _感知_ 到 _行动_ 的一个映射\$$f: P^*\to A$$ 实�
 
 ```python
 def TABLE_DRVIEN_AGENT(percept):
-    global percepts = []          # 感知序列，初始置空
-    global table = init()         # 感知序列与对应行动的记录表格
+    # 感知序列，初始置空
+    global percepts = []
+    # 感知序列与对应行动的记录表格
+    global table = init()
     percepts.append(percept)
-    action = table[percepts]      # 从表格中找到当前感知序列对应的行动
+    # 从表格中找到当前感知序列对应的行动
+    action = table[percepts]
     return action
 ```
 
@@ -68,9 +71,12 @@ def TABLE_DRVIEN_AGENT(percept):
 ```python
 def SIMPLE_REFLEX_AGENT(percept):
     global rules
-    state  = INTERPRET_INPUT(percept) # 解释当前感知对应的状态
-    rule   = rules[state]             # 从规则集中找到当前状态的应对规则
-    action = rule.action              # 得到该规则对应的行动
+    # 解释当前感知对应的状态
+    state  = INTERPRET_INPUT(percept)
+    # 从规则集中找到当前状态的应对规则
+    rule   = rules[state]
+    # 得到该规则对应的行动
+    action = rule.action
     return action
 ```
 
@@ -94,4 +100,4 @@ def MODEL_BASED_REFLEX_AGENT(percept):
 
 ### 学习型 Agent ###
 
-### Agent 程序如何组织起来运作 ###
+### 组织 Agent 程序协同运作 ###
