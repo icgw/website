@@ -4,5 +4,4 @@ _drafts/
 .jekyll-metadata
 .DS_Store
 */.DS_Strore
-Gemfile
 Gemfile.lock
