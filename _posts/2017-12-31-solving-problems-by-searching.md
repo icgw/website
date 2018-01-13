@@ -1,7 +1,7 @@
 ---
 title: 通过搜索来得到问题的解
 teaser: 解决问题的一种方式
-category: 技术类
+category: 技术篇
 tags: [计算机科学]
 ---
 

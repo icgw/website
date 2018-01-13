@@ -1,53 +1,52 @@
 ---
 title: 智能 Agent
 teaser: 人工智能领域的一个基本概念
-category: 介绍类
+category: 介绍篇
 tags: [人工智能]
 ---
 
 Agent 与环境
 ----------
 
-__Agent__ 可以通过 __传感器__ (sensors) 来感知 __环境__ (environment)，然后通过 __执行器__ (actuators) 来作用环境。
+__Agent__ 可以通过 __传感器__ 来感知 __环境__ ，然后通过 __执行器__ 来作用环境。
 
 ![agent](../images/agent.png){: width="100%"}
 
-简而言之，Agent 就是能够<mark>感知环境并作出行动的存在物</mark>，如上图 _摘苹果的小机器_ 。
+简而言之，Agent 是能够 _感知环境并作出行动的存在物_ ，如上图 _摘苹果的小机器_ 。
 
 良好行动：理性的概念
 ---------------
-__理性 Agent__ (rational agent) 就是能做出良好行动的 Agent。
+__理性 Agent__ 就是能做出良好行动的 Agent。
 
 >然而，什么是良好行动呢？
 
-所谓良好行动是指 Agent 对环境作出的行动是所期望的。而实际行动与所期望的行动之间需要用一个 __绩效指标__ (performance measure) 来衡量（一般地，实际行动达到预期则增加绩效值），而理性 Agent 就是对每一种可能的感知序列都应该做出行动来要使绩效最大化。
+所谓良好行动是指 Agent 对环境作出的行动是所期望的。而实际行动与所期望的行动之间需要用一个 __绩效评判__ 标准（一般地，实际行动达到预期则增加绩效值），而理性 Agent 就是对每一种可能的感知序列都应该做出行动来使绩效最大化。
 
-### 理性 (Rationality) ###
-__理性__ 依赖于以下四个因素：
+### 理性 ###
+__理性__ 依赖于以下四个因素 (PEAS)：
 
-1. __绩效指标__ : The performance measure that defines the criterion of success.
+1. __绩效评判__ : The performance measure that defines the criterion of success.
 2. __先验知识__ : The agent's prior knowledge of the environment. 
-3. __可能行动__ : The actions that agent can perform.
-4. __当前感知__ : The agent's percept sequence to date.
+3. __行动能力__ : The actions that agent can perform.
+4. __感知能力__ : The agent's percept sequence to date.
 
 例如下图的 _吃豆人_ (pac-man) 游戏。
 
 ![pacman](../images/pacman.jpg){: width="100%"}
 
-* 绩效指标：每到达一个有豆子的地方，则加 1 分，并限制在 30 步内；
+* 绩效评判：每到达一个有豆子的地方，则加 1 分，并限制在 30 步内；
 * 先验知识：地图（不包含豆子）；
-* 可能行动：上、下、左、右；
-* 当前感知：正确地感知到当前所处位置是否有豆子。
+* 行动能力：上、下、左、右；
+* 感知能力：判断当前位置是否有豆子。
 
 在上述描述的环境下，吃豆人的目标是使得到分数尽可能高，则称吃豆人为理性 Agent 或 智能 Agent。
 
 Agent 的结构
 ----------
 
-__Agent 函数__ 是 _感知_ 到 _行动_ 的一个映射\$$f: P^*\to A$$ 实现人工智能的一个工作就是设计 __Agent 程序__ 来实现 __Agent 函数__ 的功能。 __软件结构__ (architecture) 是一系列用来执行 __Agent 程序__ 的设备（如：感知器、执行器）。
+__Agent 函数__ 是 _感知_ 到 _行动_ 的一个映射\$$f: P^*\to A$$ 实现人工智能的一个工作就是设计 __Agent 程序__ 来实现 __Agent 函数__ 的功能。 __软件结构__ 是一系列用来执行 __Agent 程序__ 的设备（如：传感器、执行器）。
 
-换言之，\$$ Agent = 软件结构 + 程序 $$
-
+换言之，<center> Agent = 软件结构 + 程序 </center>
 ### Agent 程序 ###
 
 下面是通过查表来实现的 Agent 程序：
@@ -101,3 +100,26 @@ def MODEL_BASED_REFLEX_AGENT(percept):
 ### 学习型 Agent ###
 
 ### 组织 Agent 程序协同运作 ###
+
+*[传感器]: sensors
+^
+*[感知能力]: sensors
+^
+*[环境]: environment
+^
+*[先验知识]: environment
+^
+*[执行器]: actuators
+^
+*[行动能力]: actuators
+^
+*[理性]: Rationality
+^
+*[理性 Agent]: rational agent
+^
+*[绩效评判]: performance measure
+^
+*[软件结构]: architecture
+
+
+

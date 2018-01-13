@@ -1,7 +1,7 @@
 ---
 title: 人工神经网络
 teaser: 什么是人工神经网络？
-category: 介绍类
+category: 介绍篇
 tags: [人工智能]
 ---
 
