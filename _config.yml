@@ -5,8 +5,8 @@
 title: icgw                                 # used in <title> tag & site header
 author: Chen Guowei                         # used in a <meta> tag & /feed.xml
 description: >                              # used in a <meta> tag & /feed.xml
-    他不是英雄
-slogan: 世界无恙                           # used in site header, beside title
+    你好，世界。
+slogan: 和而不同                            # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
 url: https://icgw.github.io                 # used by plugins to generate feed.xml and sitemap.xml
@@ -19,7 +19,7 @@ nav_menu:
   - name: 博文 
     url: /
     icon: /i/icons.svg#posts # icons should be 24x24 px.
-  - name: 关于他
+  - name: 关于我
     url: /about
     icon: /i/icons.svg#portfolio
   - name: GitHub
