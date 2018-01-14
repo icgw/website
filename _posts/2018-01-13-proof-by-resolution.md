@@ -164,7 +164,8 @@ $$\begin{matrix}\alpha_1, \dots, \alpha_n, \alpha_1\wedge\dots\wedge\alpha_n \Ri
 > 1. FC 终止的时候，没有新的原子命题可以再推理出来
 > 2. 考虑终止时所构造出的模型，记为 $$m$$ ：在 inferred 列表出现的符号指派为 $$True$$，否则为 $$False$$
 > 3. 在模型 $$m$$ 下，初始的 $$KB$$ 中所有子句都为 $$True$$
-> 		- 假设子句 $$a_1\wedge\dots\wedge a_k\Rightarrow b$$ 在模型 $$m$$ 下为 $$False$$，那么有 $$a_1\wedge\dots\wedge a_k$$ 为 $$True$$ 且 $$b$$ 为 $$False$$，算法未达到终止条件，矛盾。
+> 
+> 	- 假设子句 $$a_1\wedge\dots\wedge a_k\Rightarrow b$$ 在模型 $$m$$ 下为 $$False$$，那么有 $$a_1\wedge\dots\wedge a_k$$ 为 $$True$$ 且 $$b$$ 为 $$False$$，算法未达到终止条件，矛盾。
 > 4. 因此，该模型能满足 $$KB$$
 > 5. 如果 $$KB\models q$$，即任何能满足 $$KB$$ 的模型，在该模型下 $$q$$ 为 $$True$$。而 $$m$$ 是满足 $$KB$$ 的模型。
 > 
