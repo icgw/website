@@ -27,7 +27,7 @@ $$\begin{matrix} l_1\vee\dots\vee l_k,\ \ \  m_1\vee\dots\vee m_n \\ \hline l_1\
 ------------
 ```python
     def PL_Resolution(KB, alpha):
-        # 将 KB, alpha 转化为合取范式的子句集
+        # 将 KB, \neg alpha 转化为合取范式的子句集
         clause = CNF(KB, alpha)
         new    = set()
         while True:
@@ -118,9 +118,15 @@ $$l_i$$ 与 $$m_j$$ 是互为 _补文字_
 
 目标子句都可以写成形如：$$(p_1\wedge p_2\wedge\dots\wedge p_l)\Rightarrow False$$
 
-<mark> 采用霍恩子句进行推演，计算复杂度与知识库规模是线性关系！！！</mark>
+> 采用霍恩子句进行推演，计算复杂度与知识库规模（即输入规模）是 **线性** 关系！！！
 
-##### 前向、后向推理 #####
+归结形式：肯定前件规则
+
+$$\begin{matrix}\alpha_1, \dots, \alpha_n, \alpha_1\wedge\dots\wedge\alpha_n \Rightarrow\beta \\ \hline \beta \end{matrix}$$
+
+##### 前向推理 (FC)：数据驱动 #####
+
+> 算法思想：$$KB$$ 中的霍恩子句前件能满足时，则将其结论添加进 $$KB$$ ，直到问题解决。
 
 ```python
    def PL_FC_ENTAILS(KB, alpha):
@@ -134,7 +140,7 @@ $$l_i$$ 与 $$m_j$$ 是互为 _补文字_
        # 初始化所有符号指派为 False，例如：inferred[s] 表示符号 s 的真假值
        inferred = TABLE_INIT
        
-       # 初始化 KB 中为 True 的作为符号队列
+       # 初始化 KB 中原子命题队列，指派为 True
        agenda = QUEUE_SYMBOLS
        
        while agenda:
@@ -150,6 +156,30 @@ $$l_i$$ 与 $$m_j$$ 是互为 _补文字_
                        agenda.append(c.Conclusion)
        return False
 ```
+
+###### FC 的完备性 ######
+> FC 能推理出所有 $$KB$$ 逻辑蕴含 的原子命题。
+> 
+> __证明__ ：
+> 1. FC 终止的时候，没有新的原子命题可以再推理出来
+> 2. 考虑终止时所构造出的模型，记为 $$m$$ ：在 inferred 列表出现的符号指派为 $$True$$，否则为 $$False$$
+> 3. 在模型 $$m$$ 下，初始的 $$KB$$ 中所有子句都为 $$True$$
+> 		- 假设子句 $$a_1\wedge\dots\wedge a_k\Rightarrow b$$ 在模型 $$m$$ 下为 $$False$$，那么有 $$a_1\wedge\dots\wedge a_k$$ 为 $$True$$ 且 $$b$$ 为 $$False$$，算法未达到终止条件，矛盾。
+> 4. 因此，该模型能满足 $$KB$$
+> 5. 如果 $$KB\models q$$，即任何能满足 $$KB$$ 的模型，在该模型下 $$q$$ 为 $$True$$。而 $$m$$ 是满足 $$KB$$ 的模型。
+> 
+> 综上所述，FC 是完备的。$$\Box$$
+
+##### 后向推理 (BC)：目标驱动 #####
+
+> 算法思想：要证明 $$q$$ ，从 $$KB$$ 中找到后件为 $$q$$ 的所有霍恩子句，转为证明这些霍恩子句的前件。
+
+需要注意几点：
+
+1. 要避免目标循环：检验新的目标是否已经在目标队列
+2. 要避免工作反复：检验新的目标是否已经被证明
+
+后向推理的 计算成本可以远小于 $$KB$$ 的线性规模，因为整个过程只需寻找与目标相关的前件式。
 
 *[子句]: clause    
 ^
@@ -174,3 +204,9 @@ $$l_i$$ 与 $$m_j$$ 是互为 _补文字_
 *[不可满足的]: 不存在模型（或赋值）使其所有子句为真。
 ^
 *[肯定文字]: postive literal, 即不含否定符号的原子命题
+^
+*[肯定前件]: Modus Ponens
+^
+*[前向推理]: Forward chaining
+^
+*[后向推理]: Backward chaining
