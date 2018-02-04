@@ -1,7 +1,7 @@
 ---
 title: 人工智能概述
 teaser: 什么是人工智能？以及其发展情况。
-category: 介绍类
+category: 介绍篇
 tags: [人工智能, 计算机科学]
 ---
 
