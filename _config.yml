@@ -6,7 +6,7 @@ title: (｀･д･´) 果果果客 | 纯果味           # used in <title> tag 
 author: 纯果味                              # used in a <meta> tag & /feed.xml
 description: >                              # used in a <meta> tag & /feed.xml
     你好，世界。
-slogan: 和而不同                            # used in site header, beside title
+slogan: 大道至简                            # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
 url: https://icgw.github.io                 # used by plugins to generate feed.xml and sitemap.xml
