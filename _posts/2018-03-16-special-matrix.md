@@ -1,6 +1,6 @@
 ---
 title: 特殊矩阵汇总
-teaser: 对几类特殊矩阵进行介绍
+teaser: 介绍几类特殊矩阵并归纳
 category: 介绍篇
 tags: [线性代数]
 ---
