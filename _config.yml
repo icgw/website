@@ -2,10 +2,10 @@
 # Theme Customization #
 #######################
 
-title: (｀･д･´) 果果果客 | 纯果味           # used in <title> tag & site header
+title: (｀･д･´) 果果果客~ - 纯果味           # used in <title> tag & site header
 author: 纯果味                              # used in a <meta> tag & /feed.xml
 description: >                              # used in a <meta> tag & /feed.xml
-    你好，世界。
+    为天地立心，为生民立命，为往圣继绝学，为万世开太平。
 slogan: 大道至简                            # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
