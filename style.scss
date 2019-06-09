@@ -111,7 +111,6 @@
     margin: 0 0.5rem;
     font-size: 1.5rem;
     font-weight: 700;
-    text-transform: lowercase;
 
     a:active { color: #fff; }
   }
@@ -141,7 +140,7 @@
     > div:last-child {
       left: 50%;
       margin-left: 6.5rem;
-      font-size: 5.75vw;
+      font-size: 4.75vw;
     }
   }
 
@@ -293,7 +292,7 @@
       &.collapsed { right: -25.25rem; }
 
       &::before {
-	content: '更多';
+	content: 'More';
 	display: block;
 	padding: 1.5rem;
 	height: 3rem;
