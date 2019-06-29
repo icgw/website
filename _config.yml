@@ -2,7 +2,7 @@
 # Theme Customization #
 #######################
 
-title: (｀･д･´) Hey Guowei                  # used in <title> tag & site header
+title: Home | Guowei • (｀･д･´)             # used in <title> tag & site header
 author: Guowei                              # used in a <meta> tag & /feed.xml
 description: >                              # used in a <meta> tag & /feed.xml
   Stay hungry. Stay foolish.
@@ -22,33 +22,6 @@ nav_menu:
   - name: About
     url: /about
     icon: /i/icons.svg#portfolio
-    #  - name: GitHub
-    #    url: https://github.com/icgw
-    #    icon: /i/icons.svg#github
-    #    outbound: true       # this key sets a link to open in a new window.
-    #  - name: 联系邮箱
-    #    scheme: mailto       # these keys enable email obfuscation.
-    #    handle: icgw         # you know, to protect you from bots. (handle and domain
-    #    domain: outlook.com  # are separated in case bots crawl GitHub repos, too.)
-    #    icon: /i/icons.svg#email
-
-# Objects listed here will appear on the /projects.html page.
-# projects:
-    #  - title: Solana
-    #    teaser: A responsive blog template written in Sass and vanilla JavaScript.
-    #    url: https://github.com/icgw  
-    #    role: Creator
-    #    category: Frontend Dev
-    #  - title: Cortana
-    #    teaser: A talking robot. Now available on Google Play?
-    #    url: https://play.google.com/store/apps/details?id=com.microsoft.cortana
-    #    role: Core Team
-    #    category: NLP
-    #  - title: Rihanna
-    #    teaser: Possibly another robot. Also available on Google Play.
-    #    url: https://play.google.com/store/music/artist/Rihanna?id=Arcw2m2ih45qntv3fufub25tyhu
-    #    role: Contributor
-    #    category: Algorithmic Composition
 
 #################
 # Site Settings #
