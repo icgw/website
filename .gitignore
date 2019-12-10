@@ -1,7 +1,0 @@
-_site/
-_drafts/
-.sass-cache/
-.jekyll-metadata
-.DS_Store
-*/.DS_Strore
-Gemfile.lock
