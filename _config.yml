@@ -10,8 +10,8 @@ languages_subpath: [ '/en', '/zh' ]
 switched_languages_subpath: [ '/zh', '/en' ]
 
 title:
-  - Chen, Guowei space
-  - 陈国威的拾贝室
+  - G.C. | Good Coder
+  - 囗囗 | 知石马者
 author:
   - Chen, Guowei
   - 陈国威
