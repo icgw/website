@@ -1,0 +1,32 @@
+body {
+  font-family: $base-font-family;
+  margin: 0;
+  pading: 0;
+}
+
+header {
+  display: block;
+  width: 100%;
+}
+
+header nav ul {
+  list-style-type: none;
+  line-height: 2em;
+  height: 2em;
+}
+
+header nav ul li {
+  width: 6em;
+  float: left;
+  margin-left: 1em;
+}
+
+article time {
+  display: block;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+main {
+  margin-left: 2em;
+}

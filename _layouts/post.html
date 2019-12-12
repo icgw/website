@@ -5,8 +5,8 @@ layout: default
   <header>{{- '' -}}
     <h1>{{ page.title | escape }}</h1>{{- '' -}}
     <p>{{- '' -}}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{- '' -}}
-        {{- page.date | date: "%b %d %X, %Y" -}}
+      <time datetime="{{ poge.date | date_to_xmlschema }}" itemprop="datePublished">{{- '' -}}
+        {{- page.date | date: "%Y-%m-%d %H:%M %z" -}}
       </time>{{- '' -}}
     </p>{{- '' -}}
   </header>{{- '' -}}

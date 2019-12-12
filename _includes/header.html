@@ -7,7 +7,7 @@
   {%- assign text = navigation['text'] -%}
       <li><a href="{{ url[i] }}">{{ text[i] }}</a></li>{{- '' -}}
 {%- endfor -%}
-      <li><a href="{{ site.switched_languages_subpath[i] }}">{{ site.switched_languages[i] }}</a></li>{{- '' -}}
+      <li><a href="{{ page.url | replace_first: site.languages_subpath[i], site.switched_languages_subpath[i] }}">{{ site.switched_languages[i] }}</a></li>{{- '' -}}
     </ul>{{- '' -}}
   </nav>{{- '' -}}
 </header>{{- '' -}}

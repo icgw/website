@@ -2,8 +2,11 @@ lang: en
 languages_i:
   en: 0
   zh: 1
+
 languages: [ 'english', '中文' ]
 switched_languages: [ '中文', 'english' ]
+
+languages_subpath: [ '/en', '/zh' ]
 switched_languages_subpath: [ '/zh', '/en' ]
 
 title:
@@ -25,6 +28,8 @@ url: 'https://icgw.space'
 github_user: 'icgw'
 
 navigations:
+  - text: [ 'home', '首页' ]
+    url: [ '/en/index.html', '/zh/index.html' ]
   - text: [ 'moments', '时刻' ]
     url: [ '/en/moments/list.html', '/zh/moments/list.html' ]
   - text: [ 'memoirs', '记忆' ]
