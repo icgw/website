@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- for post in site.posts -%}
+  {%- if post.lang != page.lang -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- for category in post.categories -%}
+    {%- if category == page.category -%}
+      <p>{{ post.url }}</p>{{- '' -}}
+      <p>{{ post.title }}</p>{{- '' -}}
+      <p>{{ post.date }}</p>{{- '' -}}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
