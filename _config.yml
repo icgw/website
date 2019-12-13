@@ -22,6 +22,8 @@ description:
 owner: icgw.space
 email: icgw@outlook.com
 
+timezone: Asia/Shanghai
+
 baseurl: ''
 url: 'https://icgw.space'
 
