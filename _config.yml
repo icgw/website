@@ -15,19 +15,15 @@ title:
 author:
   - Chen, Guowei
   - 陈国威
+email: icgw@outlook.com
 description:
   - a good coder just like a firefly in the dark
   - 识石马者就像漆黑中的萤火虫
-
-owner: icgw.space
-email: icgw@outlook.com
 
 timezone: Asia/Shanghai
 
 baseurl: ''
 url: 'https://icgw.space'
-
-github_user: 'icgw'
 
 navigations:
   - text: [ 'home', '首页' ]
@@ -36,3 +32,7 @@ navigations:
     url: [ '/en/moments/list.html', '/zh/moments/list.html' ]
   - text: [ 'memoirs', '记忆' ]
     url: [ '/en/memoirs/list.html', '/zh/memoirs/list.html' ]
+
+exclude:
+  - CNAME
+  - Gemfile
